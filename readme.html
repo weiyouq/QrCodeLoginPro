@@ -1,0 +1,22 @@
+如果使用maven 要导入qrcode.jar  
+参考网址：https://blog.csdn.net/weixin_34351321/article/details/87335815
+1、cmd 中执行mvn install 命令
+	格式为：
+	mvn install:install-file -Dfile=<path-to-file> -DgroupId=<group-id>-DartifactId=<artifact-id> -Dversion=<version> -Dpackaging=<packaging>
+	例如：
+	mvn install:install-file -Dfile=D:\QRCode.jar-DgroupId=QRCode-DartifactId=QRCode -Dversion=3.0 -Dpackaging=jar
+
+2、在pom.xml中引入依赖
+		<!-- 二维码工具 -->
+		<dependency>
+			<groupId>QRCode</groupId>
+			<artifactId>QRCode</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
+
+注意：
+使用过程中，需要手机和web应用在同一个网络中（比如都连接同一个路由器）
+
+jdk版本1.8
+tomcat8.0
